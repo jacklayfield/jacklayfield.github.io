@@ -1,0 +1,30 @@
+title: "Jack Layfield"
+description: "A website for posts, projects, or other content"
+
+# Email / Social media user names used by the minima theme:
+email: "layf100@gmail.com"
+github_username: "jacklayfield"
+
+theme: "minima"
+
+rss: rss
+
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+titles_from_headings:
+  strip_title: true
+  collections: true
+
+defaults:
+  - scope:
+      path: ""
+      type: post
+    values:
+      tags: Other
+      layout: "post"
