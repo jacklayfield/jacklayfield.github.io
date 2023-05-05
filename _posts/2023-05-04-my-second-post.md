@@ -1,8 +1,4 @@
----
-tag: Machine Learning
----
-
-## Sample Post For Testing Purposes
+## Another one
 
 Here's a sample post just to make sure this website is working!
 
@@ -20,4 +16,4 @@ for (let i = 0; i < cars.length; i++) {
 
 #### An image!
 
-![alt text](../../../images/animage.jpg)
+![alt text](../../../images/animage2.avif)

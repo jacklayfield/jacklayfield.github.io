@@ -7,7 +7,7 @@ github_username: "jacklayfield"
 
 theme: "minima"
 
-rss: rss
+highlighter: rouge
 
 kramdown:
   syntax_highlighter_opts:
@@ -26,5 +26,5 @@ defaults:
       path: ""
       type: post
     values:
-      tags: Other
+      tags: General
       layout: "post"
