@@ -24,7 +24,6 @@ titles_from_headings:
 defaults:
   - scope:
       path: ""
-      type: post
     values:
       tags: General
       layout: "post"
