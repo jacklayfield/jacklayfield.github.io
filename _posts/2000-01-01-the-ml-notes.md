@@ -1,5 +1,6 @@
 ---
 tag: Machine Learning
+permalink: machine-learning-notes
 ---
 
 ## Machine Learning Tips / Best Practices

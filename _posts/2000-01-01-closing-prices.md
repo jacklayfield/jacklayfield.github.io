@@ -1,5 +1,6 @@
 ---
 tag: Machine Learning
+permalink: closing-prices
 ---
 
 ## Closing Stock Price Prediction
