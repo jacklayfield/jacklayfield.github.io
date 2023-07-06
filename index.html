@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Jack Layfield</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Mr+Dafoe"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="#welcome">Welcome</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </header>
+
+    <div class="plx-image1" id="welcome">
+      <div class="text1">Jack Layfield</div>
+      <div class="text2">Personal website</div>
+      <div class="text2">Currently under construction...</div>
+      <div class="dummy" id="projects"></div>
+    </div>
+
+    <div class="content-1">
+      <div class="text3">Projects</div>
+      <div class="text4">
+        Here is a list of all of my current and past projects! Hover over each
+        image to view the project/description. You may click on the description
+        to view the associated page!
+        <section class="blog-post-teasers">
+          <article class="blog-post-teaser">
+            <figure>
+              <img src="songwriting.jpg" alt="" />
+              <figcaption>
+                <h1>
+                  <a href="./chordless.html"
+                    >Chordless - A novel guitar songwriting app</a
+                  >
+                </h1>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="blog-post-teaser">
+            <figure>
+              <img src="stock_chart.jpg" alt="" />
+              <figcaption>
+                <h1>
+                  <a
+                    >ClosingPrices - An ML based stock prediction model /
+                    tool</a
+                  >
+                </h1>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="blog-post-teaser">
+            <figure>
+              <img src="web_scraper.jpg" alt="" />
+              <figcaption>
+                <h1>
+                  <a
+                    >SimpleScrape - A basic web scraping app to connect people
+                    with similar interests</a
+                  >
+                </h1>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="blog-post-teaser">
+            <figure>
+              <img src="image_scraper.jpg" alt="" />
+              <figcaption>
+                <h1>
+                  <a
+                    >ImageScraperTool - A selenium based image scraping tool to
+                    download images from a given query</a
+                  >
+                </h1>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="blog-post-teaser">
+            <figure>
+              <img src="chat_bot.jpg" alt="" />
+              <figcaption>
+                <h1>
+                  <a>AI-Bot - Super simple AI chat bot using Go and Wit.ai</a>
+                </h1>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="blog-post-teaser">
+            <figure>
+              <img src="sports.jpg" alt="" />
+              <figcaption>
+                <h1>
+                  <a>BSPN - A sports web app developed for a local customer</a>
+                </h1>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="blog-post-teaser">
+            <figure>
+              <img src="bug_bites.jpg" alt="" />
+              <figcaption>
+                <h1>
+                  <a
+                    >BugBiteClassification - An ML project to classify common
+                    bug bites (WIP)</a
+                  >
+                </h1>
+              </figcaption>
+            </figure>
+          </article>
+          <article class="blog-post-teaser">
+            <figure>
+              <img src="video_games.jpg" alt="" />
+              <figcaption>
+                <h1><a>GameDB - A game database app using Angular</a></h1>
+              </figcaption>
+            </figure>
+          </article>
+        </section>
+      </div>
+      <div class="dummy2" id="about"></div>
+    </div>
+
+    <div class="content-2">
+      <div class="text3">About</div>
+      <div class="text4">
+        <div>
+          I am a Software Engineer who is passionate about developing
+          applications. From Simple websites, to more involved web apps, to
+          Machine Learning projects, I enjoy it all. I first fell in love with
+          the trade in middle school coding plugins for video games and
+          developing my own personal website. I continued with side projects and
+          took several classes throughout high school. Years later, I earned a
+          B.S. in Computer Science from the Virginia Tech School of Engineering
+          in May 2022. Now, I am employed as a Software Engineer for Lockheed
+          Martin, and continue to work on several projects on the side.
+        </div>
+        <div style="margin-top: 50px">
+          I take great pride in my work and get a lot of statifaction from
+          building useful things for people. While I enjoy the technical
+          (coding) side of things I think my favorite part of the process is
+          working with the customer and brainstorming solutions with teammates.
+        </div>
+        <div style="margin-top: 50px">
+          Besides coding I enjoy playing Guitar, Backpacking, and spending time
+          with friends and family.
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+    </script>
+  </body>
+</html>

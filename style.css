@@ -1,0 +1,264 @@
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: black;
+  scroll-behavior: smooth;
+}
+
+.plx-image1 {
+  background-image: url(https://burst.shopifycdn.com/photos/starry-night-sky-from-below-trees.jpg?width=925&format=pjpg&exif=1&iptc=1);
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text1 {
+  font-size: 70px;
+  padding-top: 200px;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  -webkit-text-fill-color: rgba (255, 255, 255, 1);
+  text-shadow: -3px -3px 12px #313a49;
+  font-weight: normal;
+}
+
+.text2 {
+  font-size: 40px;
+  color: white;
+  margin: 0 0 20px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.content-1 {
+  height: auto;
+  width: 100%;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.text3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 80px;
+  padding-top: 50px;
+}
+
+.text4 {
+  width: 70%;
+  margin-left: 15%;
+  padding: 30px 0 80px 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+}
+
+.plx-image2 {
+  background: black;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content-2 {
+  height: calc(100vh - 84px);
+  width: 100%;
+  text-align: center;
+  background-color: #d1d1d1;
+}
+
+.text5 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 100px;
+  padding: 80px 0 80px 0;
+  letter-spacing: 0.2em;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  z-index: 1100;
+}
+
+header.sticky {
+  background: black;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline-start: 0px !important;
+  font-weight: 600;
+}
+
+header.sticky ul li a {
+  color: white;
+}
+
+header ul li {
+  position: relative;
+  list-style: none;
+}
+
+header ul li a {
+  position: relative;
+  margin: 0 25px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.dummy {
+  background-position-x: 0;
+  background-position-y: 0;
+  margin: 66px;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+}
+
+.dummy2 {
+  background-position-x: 0;
+  background-position-y: 0;
+  margin: -99999px;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+}
+
+.browser-alert {
+  margin: 0;
+  padding: 1rem;
+  background-color: #222;
+  color: white;
+}
+
+.browser-alert a {
+  color: inherit;
+}
+
+@supports (object-fit: cover) and (display: grid) {
+  .browser-alert {
+    display: none;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.blog-post-teasers {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.blog-post-teasers > * {
+  flex: 1 1 300px;
+  align-self: flex-start;
+  padding: 1rem;
+}
+
+@supports (display: grid) {
+  .blog-post-teasers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 2rem;
+  }
+
+  .blog-post-teasers > * {
+    padding: 0;
+  }
+}
+
+.blog-post-teaser figure {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 30% 0;
+  cursor: pointer;
+}
+
+.blog-post-teaser figure::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+
+.blog-post-teaser figure:hover img {
+  opacity: 0.25;
+}
+
+.blog-post-teaser figure:hover figcaption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.blog-post-teaser figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: all 0.3s ease-in-out;
+}
+
+.blog-post-teaser figcaption h1 {
+  font-size: 18px;
+}
+
+.blog-post-teaser figcaption a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.blog-post-teaser img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  transition: all 0.3s ease-in-out;
+}
