@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Jack Layfield - ChatApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="../styling/style.css" />
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat|Mr+Dafoe"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="sticky">
+      <ul>
+        <li><a href="../index.html#welcome">Welcome</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#about">About</a></li>
+      </ul>
+    </header>
+    <div style="margin-top: 84px">
+      <div class="titles">Chat App</div>
+
+      <div class="content-wrapper">
+        <div class="paragraph bold">
+          Credit:
+          <a
+            href="https://www.freecodecamp.org/news/build-a-realtime-chat-app-with-react-express-socketio-and-harperdb/"
+            >Danny Adams</a
+          >
+        </div>
+        <div class="paragraph bold">
+          Github repo:
+          <a href="https://github.com/jacklayfield/General/tree/main/ChatApp"
+            >github.com/jacklayfield/General/tree/main/ChatApp</a
+          >
+        </div>
+        <div class="paragraph">
+          I'd like to lead off by saying that this is NOT my own project. Rather
+          I followed Danny Adams tutorial on FreeCodeCamp. However, this project
+          really intrigued me for several reasons. First of all, I had been
+          exposed tro web sockets at work, and while I understood why/how we
+          used them, I still did not feel confident in understanding a simple
+          use case through the full stack. Additionally, I had been working on
+          designing a project called "Packster" (A collaborative group
+          packing/budgeting application) with my friend and we needed to use
+          sockets in order to acheive the collaboritve real time updating
+          functionality our app would require. Therefore, it made a lot of sense
+          to start with this project.
+        </div>
+
+        <div class="paragraph">
+          This project is super cool, and I won't step through the whole thing
+          since Danny Adams already did a wonderful job of that
+          <a
+            href="https://www.freecodecamp.org/news/build-a-realtime-chat-app-with-react-express-socketio-and-harperdb/"
+            >here</a
+          >.
+        </div>
+
+        <div class="paragraph">
+          However I will highlight some major takeaways related to sockets:
+        </div>
+
+        <div class="paragraph">
+          Starting with the server we have some important set up. First, I'd
+          like to point out we are using socket.io, so everything will be
+          working under that assumption. First off, we create a basic http
+          server using "http" and "express". Then we will create our socket
+          based server by passing in our previous server into the "socket.io"
+          server constructor.
+        </div>
+
+        <div class="paragraph">
+          After this we will set up the function whose purpose is to listen for
+          the client connections/events. Inside this function we will create
+          functions for any events we desire. For example, this application uses
+          a few major ones for "join_room", "send_message", and "leave_room".
+        </div>
+
+        <img src="../images/socket_server.jpg" style="width: 75%" />
+
+        <div class="paragraph">
+          These events will be triggered from our frontend code. For example,
+          whenever a user joins it will trigger the "join_room" event which will
+          carry out that functionality on the server.
+        </div>
+
+        <div class="paragraph">
+          Now, this may seem kinds similar to any other simple http request,
+          however there is one important and useful distinction with sockets.
+          Rather than an isolated http request performing some capability and
+          terminating, socket connections stay open. This is important because
+          they can receive data at any time, which in turn can trigger updates
+          in real time (no need to refresh to pick up changes).
+        </div>
+
+        <div class="paragraph">
+          Let's look at an example. When a user sends a message, we can see on
+          the frontend we call this "sendMessage" function. This function then
+          executes a "socket.emit" function for "send_message" that takes in the
+          username, room, message, and time stamp. We should then be able to
+          take a look at our server and see a "send_message" event handler. Sure
+          enough, we do, and it executes a very important line. That is, for the
+          current "room", it emits a "receive_message" event along with the
+          data. (Also note that at this point, this data is also saved off to
+          the Database to be fetched upon certain other events, namely grabbing
+          messages when a user joins/re-joins a room)
+        </div>
+
+        <img src="../images/socket_send_message.jpg" style="width: 75%" />
+
+        <div class="paragraph">
+          Now, let's jump back to the frontend. Inside "messages.js" we see a
+          useEffect hook. Inside this hook we see a line that specifically looks
+          for this 'receive_message' event and then sets the the received
+          messages array (the array housing message data shown to the user)
+          accordingly.
+        </div>
+
+        <img src="../images/socket_use_effect.jpg" style="width: 75%" />
+
+        <div class="paragraph">
+          So now we've come full circle. We have traveled through the full stack
+          and saw how sockets allow us to have an application update in real
+          time with the actions of it's users.
+        </div>
+
+        <br />
+        <br />
+      </div>
+    </div>
+  </body>
+</html>
