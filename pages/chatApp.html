@@ -36,6 +36,7 @@
             >github.com/jacklayfield/General/tree/main/ChatApp</a
           >
         </div>
+        <div class="section-heading">Introduction</div>
         <div class="paragraph">
           I'd like to lead off by saying that this is NOT my own project. Rather
           I followed Danny Adams tutorial on FreeCodeCamp. However, this project
@@ -63,6 +64,8 @@
           However I will highlight some major takeaways related to sockets:
         </div>
 
+        <div class="section-heading">Set up</div>
+
         <div class="paragraph">
           Starting with the server we have some important set up. First, I'd
           like to point out we are using socket.io, so everything will be
@@ -87,14 +90,18 @@
           carry out that functionality on the server.
         </div>
 
+        <div class="section-heading">Why Sockets?</div>
+
         <div class="paragraph">
-          Now, this may seem kinds similar to any other simple http request,
-          however there is one important and useful distinction with sockets.
-          Rather than an isolated http request performing some capability and
-          terminating, socket connections stay open. This is important because
-          they can receive data at any time, which in turn can trigger updates
-          in real time (no need to refresh to pick up changes).
+          Now, this whole process may seem kinds similar to any other simple
+          http request, however there is one important and useful distinction
+          with sockets. Rather than an isolated http request performing some
+          capability and terminating, socket connections stay open. This is
+          important because they can receive data at any time, which in turn can
+          trigger updates in real time (no need to refresh to pick up changes).
         </div>
+
+        <div class="section-heading">Walk-through Example</div>
 
         <div class="paragraph">
           Let's look at an example. When a user sends a message, we can see on
@@ -120,6 +127,8 @@
         </div>
 
         <img src="../images/socket_use_effect.jpg" style="width: 75%" />
+
+        <div class="section-heading">Conclusion</div>
 
         <div class="paragraph">
           So now we've come full circle. We have traveled through the full stack
