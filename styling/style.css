@@ -6,7 +6,7 @@ body {
 }
 
 .welcome {
-  background-image: url(https://burst.shopifycdn.com/photos/starry-night-sky-from-below-trees.jpg?width=925&format=pjpg&exif=1&iptc=1);
+  background-image: url(https://yosemitehotels.com/wp-content/uploads/2023/01/yosemite-stargazing.jpg);
   text-align: center;
   width: 100%;
   height: 100vh;
@@ -15,6 +15,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   margin-right: 0;
+  background-blend-mode: multiply;
+  background-color: rgb(0, 17, 36, 0.7);
 }
 
 .text1 {
